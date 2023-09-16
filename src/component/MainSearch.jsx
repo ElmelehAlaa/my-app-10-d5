@@ -31,8 +31,8 @@ const MainSearch = (props) => {
       style={{ backgroundImage: "url(https://images6.alphacoders.com/846/846724.jpg)", height: "100vh" }}
     >
       <Row>
-        <h1 style={{ fontSize: "50px" }} className="text-white text-center py-5 ">
-          Meteo.it
+        <h1 style={{ fontSize: "60px", fontWeight: "700" }} className="text-white text-center py-5 ">
+          Meteo
         </h1>
         <Col xs="12">
           <Form onSubmit={handleSubmit}>

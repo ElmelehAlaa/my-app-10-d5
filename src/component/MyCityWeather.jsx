@@ -109,21 +109,27 @@ const MyCityWeather = (props) => {
                     border: " solid white 1px",
                     width: "100px",
                     height: "150px",
-                    borderRadius: "30%",
+                    borderRadius: "50px",
                     padding: "15px",
                     backgroundColor: "rgb(141 134 134 / 50%)",
                   }}
                 >
                   <p style={{ fontWeight: "600" }}>{list.dt_txt.slice(11, 16)}</p>
-                  <div>{/* {<img src=http://openweathermap.org/img/w/${list.weather[0].icon}.png />} */}</div>
                   <div>
-                    <img src="http://openweathermap.org/img/w/02d.png" alt="weather-icon" />
+                    <img
+                      src={`http://openweathermap.org/img/w/${list.weather[0].icon}.png`}
+                      alt="weather-img
+                  "
+                    />
                   </div>
+                  {/* <div>
+                    <img src="http://openweathermap.org/img/w/02d.png" alt="weather-icon" />
+                  </div> */}
                   <p style={{ fontWeight: "600", fontSize: "20px" }}>{(list.main.temp - 273).toFixed()}°</p>
                 </div>
               ))
             ) : (
-              <div>niente</div>
+              <div>Non ci sono previsioni</div>
             )}
           </div>
         </Col>
