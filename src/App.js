@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainSearch />} />;
-        <Route path="/:citylanlon" element={<MyCityWeather />} />;
+        <Route path="/:citylat/:citylon" element={<MyCityWeather />} />;
       </Routes>
     </BrowserRouter>
   );
