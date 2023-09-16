@@ -44,7 +44,7 @@ const MainSearch = (props) => {
             <Col xs={"12"} key={i}>
               <ListGroup>
                 <ListGroup.Item>
-                  <Link to={`/${city.lat}+${city.lon}`}>{city.name}</Link>
+                  <Link to={`/${city.lat}/${city.lon}`}>{city.name}</Link>
                   {city.state}, {city.country}
                 </ListGroup.Item>
               </ListGroup>

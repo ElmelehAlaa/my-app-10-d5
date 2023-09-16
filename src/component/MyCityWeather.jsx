@@ -6,17 +6,17 @@ const MyCityWeather = (props) => {
   const params = useParams();
   const [weather, setWeather] = useState(null);
   const [foreCast, setForeCast] = useState(null);
-  const sliceParamsLat = params.citylanlon.slice(0, 10);
-  console.log(sliceParamsLat);
-  const sliceParamsLon = params.citylanlon.slice(11, 21);
-  console.log(sliceParamsLon);
+  const paramsLat = params.citylat;
+  console.log(paramsLat);
+  const paramsLon = params.citylon;
+  console.log(paramsLon);
   const getWeather = async () => {
     try {
       const response = await fetch(
         "https://api.openweathermap.org/data/2.5/weather?lat=" +
-          sliceParamsLat +
+          paramsLat +
           "&lon=" +
-          sliceParamsLon +
+          paramsLon +
           "&appid=a774c54ac0b76058b4e70c27466aa218"
       );
       if (response.ok) {
@@ -35,9 +35,9 @@ const MyCityWeather = (props) => {
     try {
       const responseForeCast = await fetch(
         "https://api.openweathermap.org/data/2.5/forecast?lat=" +
-          sliceParamsLat +
+          paramsLat +
           "&lon=" +
-          sliceParamsLon +
+          paramsLon +
           "&appid=a774c54ac0b76058b4e70c27466aa218"
       );
       if (responseForeCast.ok) {
