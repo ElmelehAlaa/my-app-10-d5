@@ -93,10 +93,11 @@ const MyCityWeather = (props) => {
             </Col>{" "}
           </>
         ) : (
-          <div></div>
+          <div>Loading</div>
         )}
       </Row>
       <Row className="justify-content-between" style={{ background: "rgba(51, 170, 51, .1)", marginTop: "200px" }}>
+        <h3 className="text-white text-center">Previsioni Prossimi giorni ogni 3 ore</h3>
         <Col xs={"10"} className="text-white m-auto">
           <div className="d-flex overflow-scroll p-4">
             {foreCast !== null ? (
@@ -108,12 +109,13 @@ const MyCityWeather = (props) => {
                     marginInline: "20px",
                     border: " solid white 1px",
                     width: "100px",
-                    height: "150px",
+                    height: "200px",
                     borderRadius: "50px",
                     padding: "15px",
                     backgroundColor: "rgb(141 134 134 / 50%)",
                   }}
                 >
+                  <p className="text-white fw-2"> {list.dt_txt.slice(5, 10)}</p>
                   <p style={{ fontWeight: "600" }}>{list.dt_txt.slice(11, 16)}</p>
                   <div>
                     <img
